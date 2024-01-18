@@ -1,0 +1,6 @@
+print("Anna paino")
+luoti = float(input("Luodit: "))
+naula = float(input("Naulat: "))
+leiviskä = float(input("Leiviskät: "))
+paino = 13.3 * ((leiviskä * 20 + naula) * 32 + luoti)
+print("Massa nykymittojen mukaan mukaan: " + str(int(paino / 1000)) + " kiloa " + str(int(paino % 1000)) + "grammaa")
