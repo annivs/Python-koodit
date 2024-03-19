@@ -14,8 +14,8 @@ class Auto:
         print(f"{self.rekkari} {self.huippunopeus}")
         print(f"{self.nopeus} {self.matka}")
 
-auto1 = Auto("ABC-123", "142")
+auto1 = Auto("ABC-123", "142 km/h")
 
-print(f"Uuden auton tiedot {auto1.print_info}")
+print(f"Uuden auton tiedot: {auto1}")
 
 auto1.print_info()
