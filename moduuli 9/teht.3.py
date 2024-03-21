@@ -2,7 +2,7 @@ class Auto:
 
     auto_count = 0
 
-    def __init__(self, rekkari, huippunopeus):
+    def __init__(self, rekkari, huippunopeus, alkunopeus, kuljettu_matka):
         Auto.auto_count = Auto.auto_count + 1
         print(f"Uusi auto, autoja on nyt {Auto.auto_count} kpl")
         self.rekkari = rekkari
@@ -24,8 +24,12 @@ class Auto:
         else:
             self.nopeus = uusi_nopeus
 
+    def kulje(self, aika):
+        self.kuljettu_matka += self.nopeus * aika
 
-auto = Auto('ABC-123',1000)
+
+
+auto = Auto('ABC-123',150, 60, 2000)
     #kiihdytys
 auto.kiihdytä(30)
 auto.kiihdytä(70)
@@ -36,3 +40,5 @@ print(f"Auton uusi nopeus:", auto.nopeus, "km/h")
 auto.kiihdytä(-200)
 print("Auton nopeus hätäjarrutuksen jälkeen:", auto.nopeus, "km/h")
 
+auto.kulje(1.5)
+auto.print_info()
